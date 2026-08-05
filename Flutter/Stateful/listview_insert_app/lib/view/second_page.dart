@@ -186,6 +186,7 @@ class _SecondPageState extends State<SecondPage> {
               onPressed: () {
                 widget.list.add(animal);
                 Navigator.of(context).pop();
+                Navigator.pushNamed(context, '/animal');
               }, 
               child: Text('예'),
             ),
