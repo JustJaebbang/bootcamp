@@ -12,8 +12,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
   // Property
-  late String lampImage;
-  late bool lampState;
+  late String lampImage; // 램프 이미지
+  late bool lampState; // 램프 상태
 
   @override
   void initState() {
@@ -83,6 +83,12 @@ class _HomeState extends State<Home> {
         ],
       );
     }else{
+      lampOnOff();
+    }
+    setState(() {});
+  }
+
+  void lampOnOff(){
       showCupertinoModalPopup(
         context: context, 
         builder: (context) {
@@ -106,10 +112,12 @@ class _HomeState extends State<Home> {
                 child: Text('아니오'),
               ),
             ],
+            cancelButton: CupertinoActionSheetAction(
+              onPressed: () => Get.back(), 
+              child: Text('Cancel'),
+            ),
           );
         }
       );
-    }
-    setState(() {});
   }
 }
