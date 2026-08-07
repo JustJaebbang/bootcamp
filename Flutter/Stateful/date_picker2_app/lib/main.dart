@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
       supportedLocales: [
